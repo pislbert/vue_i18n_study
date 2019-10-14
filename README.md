@@ -1,4 +1,4 @@
-# vue-multiple-pages
+# vue-i18n study
 
 ## A multiple Pages Starter use Vue-cli3
 
