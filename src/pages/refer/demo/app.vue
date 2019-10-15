@@ -15,7 +15,7 @@ export default {
   // name: 'app',
   data() {
     return {
-      lang: "zh-CN"
+      lang: 'zh-CN'
     }
   },
   methods: {
@@ -35,7 +35,7 @@ export default {
           }).catch(() => {
               this.$message({
                   type: 'info',
-              });          
+              });
           });
       }
   }
