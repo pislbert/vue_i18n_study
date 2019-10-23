@@ -13,7 +13,7 @@ glob.sync('./src/pages/**/app.js').forEach(path => {
   }
 })
 
-const webpack = require("webpack");
+const webpack = require('webpack')
 
 module.exports = {
   pages,
@@ -27,14 +27,14 @@ module.exports = {
       }
     }
   },
-  publicPath: "/dist",
+  publicPath: '/dist',
   configureWebpack: {
     plugins: [
       new webpack.ProvidePlugin({
-        $: "jquery",
-        jQuery: "jquery",
-        "window.jQuery": "jquery",
-        Popper: ["popper.js", "default"]
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery',
+        Popper: ['popper.js', 'default']
       })
     ]
   },
@@ -42,10 +42,10 @@ module.exports = {
     extract: true, // 是否使用css分离插件 ExtractTextPlugin
     sourceMap: false, // 开启 CSS source maps?
     loaderOptions: {
-        less: {
-            javascriptEnabled: true //less 配置
-        }
+      less: {
+        javascriptEnabled: true //less 配置
+      }
     }, // css预设器配置项
     modules: false // 启用 CSS modules for all css / pre-processor files.
-  },
+  }
 }

@@ -13,29 +13,54 @@ import $ from 'jquery'
 import { getLanguage } from '../i18n/index'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
-import '../static/bootstrap-datetimepicker/bootstrap-datetimepicker.css'
 import '../static/bootstrap-datetimepicker/bootstrap-datetimepicker.js'
+import '../static/bootstrap-datetimepicker/bootstrap-datetimepicker.css'
 
-let lauguage = getLanguage()
-let bigLauguage = 'en'
-if (lauguage == 'zh') {
-  require('../static/bootstrap-datetimepicker/bootstrap-datetimepicker.zh-cn.js')
-  // require('../static/bootstrap-datetimepicker/bootstrap-datetimepicker.zh-cn.js')
-  bigLauguage = 'zh-CN'
+// import ('../static/bootstrap-datetimepicker/bootstrap-datetimepicker.css')
+// import ('../static/bootstrap-datetimepicker/bootstrap-datetimepicker.js')
+
+// $('#timepicker').datetimepicker({
+//   language: bigLauguage,
+//   format: 'yyyy-mm-dd hh:ii:ss',
+//   autoclose: true
+// })
+
+export default {
+  // updated: function() {
+  //   this.datetimepicker({
+  //     language: bigLauguage,
+  //     format: 'yyyy-mm-dd hh:ii:ss',
+  //     autoclose: true
+  //   })
+  // }
+  mounted: function() {
+    let lauguage = getLanguage()
+    let bigLauguage = 'en'
+    if (lauguage == 'zh') {
+      require('../static/bootstrap-datetimepicker/bootstrap-datetimepicker.zh-cn.js')
+      // import('../static/bootstrap-datetimepicker/bootstrap-datetimepicker.zh-cn.js')
+      // require('../static/bootstrap-datetimepicker/bootstrap-datetimepicker.zh-cn.js')
+      console.log('ee2')
+      bigLauguage = 'zh-cn'
+    } else {
+      console.log('ee3')
+    }
+
+    $('#timepicker').datetimepicker({
+      language: bigLauguage,
+      fontAwesome: 'font-awesome',
+      format: 'yyyy-mm-dd hh:ii:ss',
+      autoclose: true
+    })
+
+    console.log(bigLauguage)
+  }
 }
-
-$('#timepicker').datetimepicker({
-  language: bigLauguage,
-  format: 'yyyy-mm-dd hh:ii:ss',
-  autoclose: true
-})
-
-export default {}
 </script>
 
 <style lang="css">
 /* @import '../static/bootstrap-datetimepicker/bootstrap-datetimepicker.css'; */
-  /* div {
+/* div {
     color:red;
   } */
 </style>
