@@ -2,8 +2,6 @@ import Vue from 'vue'
 import App from './app.vue'
 import i18n from './i18n'
 
-import './static/font-awesome-4.7.0/css/font-awesome.css'
-
 // Vue.directive('loaded-callback', {
 //   inserted: function(el, binding, vnode) {
 //     binding.value(el, binding, vnode)

@@ -1,6 +1,8 @@
 <template lang="html">
   <div>
     hello
+
+    
   </div>
 </template>
 
@@ -9,7 +11,7 @@
 </script>
 
 <style lang="css">
-  div {
-    color:red;
-  }
+div {
+  color: red;
+}
 </style>
