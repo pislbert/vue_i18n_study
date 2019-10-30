@@ -13,8 +13,8 @@ import $ from 'jquery'
 import { getLanguage } from '../i18n/index'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
-import '../static/bootstrap-datetimepicker/bootstrap-datetimepicker.js'
-import '../static/bootstrap-datetimepicker/bootstrap-datetimepicker.css'
+import '@/assets/bootstrap-datetimepicker/bootstrap-datetimepicker.js'
+import '@/assets/bootstrap-datetimepicker/bootstrap-datetimepicker.css'
 
 // import ('../static/bootstrap-datetimepicker/bootstrap-datetimepicker.css')
 // import ('../static/bootstrap-datetimepicker/bootstrap-datetimepicker.js')
@@ -37,7 +37,7 @@ export default {
     let lauguage = getLanguage()
     let bigLauguage = 'en'
     if (lauguage == 'zh') {
-      require('../static/bootstrap-datetimepicker/bootstrap-datetimepicker.zh-cn.js')
+      require('@/assets/bootstrap-datetimepicker/bootstrap-datetimepicker.zh-cn.js')
       // import('../static/bootstrap-datetimepicker/bootstrap-datetimepicker.zh-cn.js')
       // require('../static/bootstrap-datetimepicker/bootstrap-datetimepicker.zh-cn.js')
       console.log('ee2')
